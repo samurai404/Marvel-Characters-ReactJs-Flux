@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MARVEL CHARACTERS
 
-## Available Scripts
+Le projet  MARVEL CHARACTERS utilise Javascript Node +ReactJs (flux):
 
-In the project directory, you can run:
 
-### `npm start`
+- <strong>L'API Fetch</strong> est utilisés pour récupérer les données.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technique
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+ `ReactJS`, `Flux`, `API Marvel` 
 
-### `npm test`
+# Sommaire
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. [Organisation du projet](#organisation-du-projet)
+2. [Démarrer le projet](#démarrer-le-projet)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Organisation du projet
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+ Dossiers projet
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* `/src/action/` :  l'action: déclenchées par un clic dans une UI, ou bien peuvent provenir du serveur.
 
-### `npm run eject`
+* `/src/assets/` :  contient le style css des composants.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* `/src/common/` : contient les modules communs.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* `/src/component/` : contient les composants utilisés par les view.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* `/src/dispatcher/` :  le dispatcher:exécute les callbacks et propage les actions.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* `/src/service/` : Contient l'ensemble des appels au web services.
 
-## Learn More
+* `/src/store/` : contient le contexte d'état complexe de l'application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* `/src/view/` :  les View:'rendering' des données dans le DOM , ou bien lancer les actions utilisateurs.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Fichiers projet
 
-### Code Splitting
+* `index.js` : point d'entré de l'application.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* `/public/index.html` : interprète par le navigateur pour afficher la logique des composants.
 
-### Analyzing the Bundle Size
+Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+* `/common/config.js` : contient la configuration de l'api marvel.
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Démarrer le projet
 
-### Advanced Configuration
+1. se placer dans le répertoire `/marvel-characters/`.
+2. lancer la commande **npm install**.
+3. lancer la commande **npm start**.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Note :**
+Pour générer le hash en MD5 accéder au site https://www.md5.fr/ et 'hasher': timestamp+privatekey+publickey

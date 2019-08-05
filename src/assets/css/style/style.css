@@ -1,0 +1,21 @@
+.header-body  {
+    background-color: black;
+}
+
+.header-image {
+    margin-left: 300px;
+}
+
+.container-body {
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/explore_art_mas_dsk_01_0.jpg");
+    background-size: cover;
+}
+
+.container-character {
+    margin-left: 100px;
+}
+
+.loader {
+    display: block;
+    margin: 0 auto;
+}
